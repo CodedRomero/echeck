@@ -11769,7 +11769,7 @@ _.d=d
 _.e=e
 _.f=f},
 Nu:function Nu(){},
-ai6(a){return new A.wP(a,null)},
+ai6(a,b){return new A.wP(a,b,null)},
 a3P(a){var s=a.p6(t.Np)
 if(s!=null)return s
 throw A.c(A.X9(A.a([A.um("Scaffold.of() called with a context that does not contain a Scaffold."),A.bm("No Scaffold ancestor could be found starting from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same StatefulWidget as that whose build function actually creates the Scaffold widget being sought."),A.Wx('There are several ways to avoid this problem. The simplest is to use a Builder to get a context that is "under" the Scaffold. For an example of this, please see the documentation for Scaffold.of():\n  https://api.flutter.dev/flutter/material/Scaffold/of.html'),A.Wx("A more efficient solution is to split your build function into several widgets. This introduces a new context from which you can obtain the Scaffold. In this solution, you would have an outer widget that creates the Scaffold populated by instances of your new inner widgets, and then in these inner widgets you would use Scaffold.of().\nA less elegant but more expedient solution is assign a GlobalKey to the Scaffold, then use the key.currentState property to obtain the ScaffoldState rather than using the Scaffold.of() function."),a.a3z("The context used was")],t.F)))},
@@ -11857,8 +11857,9 @@ _.b=c
 _.c=null},
 aaB:function aaB(a,b){this.a=a
 this.b=b},
-wP:function wP(a,b){this.f=a
-this.a=b},
+wP:function wP(a,b,c){this.f=a
+this.cy=b
+this.a=c},
 pR:function pR(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p){var _=this
 _.d=a
 _.e=b
@@ -38369,7 +38370,7 @@ l=a.a_(l).f
 r=A.ax2(n.d,A.alc(m,m,m,m,m,m,m,m,!0,m,m,m,B.vD,m,B.k,!0,m,m,m,m,m,m,m,m,m,m,m,"Enter code here",m,m,m,m,!1,m,m,m,m,m,m,m,m,m,m,m,m,A.auE(B.Bt,new A.a9F(n),m),m,m,m,m),new A.a9G(n),new A.a9H())
 l=A.lq(new A.uC(r,B.wh,n.e),m,l.a.b*0.8)
 r=A.DS(B.MI,new A.a9I(n))
-return A.ai6(A.xh(B.cA,A.a([k,j,A.alY(0,A.asJ(A.oE(A.a([new A.dM(B.AH,q,m),A.oE(A.a([l,B.dl,r,B.dl,n.r?B.vn:B.vG],o),B.bm,B.bP,B.bQ),new A.dM(B.AJ,A.a36(m,m,B.cu,m,m,!0,m,B.J7,B.aW,m,m,1,B.aX),m)],o),B.bm,B.Fm,B.bQ),s))],o),B.dm))}}
+return A.ai6(A.xh(B.cA,A.a([k,j,A.alY(0,A.asJ(A.oE(A.a([new A.dM(B.AH,q,m),A.oE(A.a([l,B.dl,r,B.dl,n.r?B.vn:B.vG],o),B.bm,B.bP,B.bQ),new A.dM(B.AJ,A.a36(m,m,B.cu,m,m,!0,m,B.J7,B.aW,m,m,1,B.aX),m)],o),B.bm,B.Fm,B.bQ),s))],o),B.dm),!0)}}
 A.a9K.prototype={
 $0(){this.a.r=!0},
 $S:0}
@@ -38441,7 +38442,7 @@ A.MA.prototype={
 dX(a,b){var s=null,r=A.iK(a,s,s,s,s,s,s)
 return A.alo(B.Bs,A.iK(b,s,s,s,s,s,s),r)},
 K(a){var s=this
-return A.ai6(A.ai5(!0,A.oE(A.a([B.Go,B.dJ,B.MA,B.dJ,s.dX(J.aJ(s.a.c,1),"First Name"),s.dX(J.aJ(s.a.c,2),"Surname"),s.dX(J.cd(J.aJ(s.a.c,3)),"Age"),s.dX(J.aJ(s.a.c,4),"Educational Status"),s.dX(J.cd(J.aJ(s.a.c,5)),"Contact"),s.dX(J.aJ(s.a.c,7),"Residential Area"),s.dX(J.cd(J.aJ(s.a.c,11)),"Unique Code"),s.dX(J.aJ(s.a.c,10),"Payment"),B.dl,A.DS(B.MC,new A.aca(a))],t.p),B.bm,B.bP,B.bQ),B.P,!0))}}
+return A.ai6(A.ai5(!0,A.oE(A.a([B.Go,B.dJ,B.MA,B.dJ,s.dX(J.aJ(s.a.c,1),"First Name"),s.dX(J.aJ(s.a.c,2),"Surname"),s.dX(J.cd(J.aJ(s.a.c,3)),"Age"),s.dX(J.aJ(s.a.c,4),"Educational Status"),s.dX(J.cd(J.aJ(s.a.c,5)),"Contact"),s.dX(J.aJ(s.a.c,7),"Residential Area"),s.dX(J.cd(J.aJ(s.a.c,11)),"Unique Code"),s.dX(J.aJ(s.a.c,10),"Payment"),B.dl,A.DS(B.MC,new A.aca(a))],t.p),B.bm,B.bP,B.bQ),B.P,!0),null)}}
 A.aca.prototype={
 $0(){A.jA(this.a,!1).cO()},
 $S:0}
@@ -38469,7 +38470,7 @@ K(a){var s,r,q=this
 if(J.f(J.aJ(q.d,10),"no"))s=new A.tP(q.d,null)
 else{s=J.f(J.aJ(q.d,9),"no")
 r=q.d
-s=s?A.oE(A.a([B.Gp,B.dJ,B.MB,B.dJ,q.dX(J.aJ(r,1),"First Name"),q.dX(J.aJ(q.d,2),"Surname"),q.dX(J.cd(J.aJ(q.d,3)),"Age"),q.dX(J.aJ(q.d,4),"Educational Status"),q.dX(J.cd(J.aJ(q.d,5)),"Contact"),q.dX(J.aJ(q.d,7),"Residential Area"),q.dX(J.cd(J.aJ(q.d,11)),"Unique Code"),q.dX(J.aJ(q.d,10),"Payment"),A.DS(B.ME,new A.aet(q,a))],t.p),B.bm,B.bP,B.bQ):new A.vT(r,null)}return A.ai6(A.ai5(!0,s,B.P,!0))}}
+s=s?A.oE(A.a([B.Gp,B.dJ,B.MB,B.dJ,q.dX(J.aJ(r,1),"First Name"),q.dX(J.aJ(q.d,2),"Surname"),q.dX(J.cd(J.aJ(q.d,3)),"Age"),q.dX(J.aJ(q.d,4),"Educational Status"),q.dX(J.cd(J.aJ(q.d,5)),"Contact"),q.dX(J.aJ(q.d,7),"Residential Area"),q.dX(J.cd(J.aJ(q.d,11)),"Unique Code"),q.dX(J.aJ(q.d,10),"Payment"),A.DS(B.ME,new A.aet(q,a))],t.p),B.bm,B.bP,B.bQ):new A.vT(r,null)}return A.ai6(A.ai5(!0,s,B.P,!0),null)}}
 A.aev.prototype={
 $1(a){var s=this.a
 s.ab(new A.aeu(s,a))},
@@ -38496,7 +38497,7 @@ n=A.iR(u.z,0,null)
 l=t.N
 k=t.z
 s=7
-return A.Y(A.agu(n,A.ap(["code",b,"action","check"],l,k),A.ap(["Access-Control-Allow-Origin","*","Accept","application/json","Access-Control-Allow-Methods","GET,PUT,PATCH,POST,DELETE","Access-Control-Allow-Headers",u.O],l,l)),$async$ou)
+return A.Y(A.agu(n,A.ap(["code",b,"action","check"],l,k),A.ap(["Access-Control-Allow-Origin","https://codedromero.github.io/echeck","Accept","application/json","Access-Control-Allow-Methods","GET,PUT,PATCH,POST,DELETE","Access-Control-Allow-Headers",u.O],l,l)),$async$ou)
 case 7:m=d
 s=m.b===200?8:10
 break
@@ -45103,8 +45104,8 @@ XA(){var s,r=this.c
 r.toString
 s=A.a1O(r)
 if(s!=null&&s.d.length!==0)s.hU(0,B.A6,B.cJ)},
-glR(){this.a.toString
-return!0},
+glR(){var s=this.a.cy
+return s!==!1},
 am(){var s,r=this,q=null
 r.aF()
 s=r.c
